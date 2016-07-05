@@ -1,0 +1,9 @@
+builder Casa {
+habitacion(m: int)
+baño(m: int)
+cocina(m: int)
+salon(m: int)
+garaje(m: int)
+terraza(m: int)
+jardin(m: int)
+}

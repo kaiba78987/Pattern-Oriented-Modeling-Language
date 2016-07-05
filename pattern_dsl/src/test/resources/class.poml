@@ -1,0 +1,8 @@
+public class Canvas {
+	private height: int
+	private width:int
+	public clear(): void
+	resize(height: int, width: int): void
+	public setOpacity(oppacity: int): void
+	}
+	

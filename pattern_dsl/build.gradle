@@ -1,0 +1,31 @@
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+
+repositories{
+    mavenCentral()
+    mavenLocal()
+    flatDir {
+    	dirs "lib"
+    	}
+}
+
+dependencies{
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile "org.scala-lang:scala-library:2.11.8"
+    compile group: "org.scala-lang", name: "scala-parser-combinators", version: "2.11.0-M4"
+    compile group: "org.eclipse.uml2", name: "org.eclipse.uml2.uml", version: "3.1.0.v201006071150"
+    compile name: "org.eclipse.uml2.uml.resources_5.2.0.v20160516-0939"
+    compile name: "org.eclipse.uml2.types_2.0.0.v20160516-0939"
+    compile name: "org.eclipse.uml2.uml.profile.standard_1.0.100.v20160516-0939"
+    // compile group: "org.eclipse.uml2", name: "org.eclipse.uml2.uml.resources", version: "3.1.0.v201005031530"
+    // compile group: 'org.eclipse.uml2.uml', name: 'resources', version: '5.0.0-v20140602-0749'
+    testCompile "junit:junit:4.12"
+    testCompile group: "org.scalatest", name: "scalatest_2.11", version: "2.2.6"
+}
+
+task run(type: JavaExec, dependsOn: classes) {
+    main = 'es.uah.cc.fjestrada.patternDSL.patterns.POMLMain'
+    args = ['src/main/resources/models/model.poml', 'src/main/resources/models/example.uml']
+    classpath sourceSets.main.runtimeClasspath
+    classpath configurations.runtime
+}

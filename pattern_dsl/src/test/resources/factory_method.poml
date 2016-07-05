@@ -1,0 +1,8 @@
+factory method Color {
+black()
+white()
+red()
+green()
+blue()
+custom(r: int, g: int, b: int)
+}

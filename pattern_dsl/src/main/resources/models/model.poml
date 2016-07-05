@@ -1,0 +1,54 @@
+model Example {
+
+	patterns {
+	
+	abstract factory Coche products [Motor, Chasis, Carroceria] factories [Renault, Citroen, Seat]
+		singleton Paleta
+		prototype Color
+		
+		builder Casa {
+habitacion(m: int)
+baño(m: int)
+cocina(m: int)
+salon(m: int)
+garaje(m: int)
+terraza(m: int)
+jardin(m: int)
+}
+
+factory method Color {
+black()
+white()
+red()
+green()
+blue()
+custom(r: int, g: int, b: int)
+}
+		
+	}
+
+	relations {
+	
+		Color <|-- ColorAlfa
+		Line 1 *-- many Point : contents
+	}
+
+	classifiers {
+	
+	public class Canvas {
+	private height: int
+	private width:int
+	public clear(): void
+	resize(height: int, width: int): void
+	public setOpacity(oppacity: int): void
+	}
+	
+	abstract class Color {
+		public getRed(): int
+		public getGreen(): int
+		public getBlue(): int
+		}
+			
+		}
+
+}

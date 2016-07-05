@@ -1,0 +1,4 @@
+interface Example {
+clear(): void
+public resize(height: int, width: int): void
+}
