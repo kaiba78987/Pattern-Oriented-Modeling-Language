@@ -20,9 +20,11 @@ import es.uah.cc.fjestrada.patternDSL.uml.InterfaceOperationBuilder
 import es.uah.cc.fjestrada.patternDSL.uml.NamedElementBuilder
 import es.uah.cc.fjestrada.patternDSL.uml.PrototypeBuilder
 import es.uah.cc.fjestrada.patternDSL.uml.SingletonBuilder
+import org.scalatest.Specs
+import org.scalatest.Suites
 
 @RunWith(classOf[JUnitRunner])
-class ParserSuite extends Suite {
+class ParserSuite extends Suites {
   
   val basePath = "src/test/resources/"
   val parser = new DSLParser()
