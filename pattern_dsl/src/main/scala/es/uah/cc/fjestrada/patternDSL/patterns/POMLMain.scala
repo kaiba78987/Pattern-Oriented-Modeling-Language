@@ -1,3 +1,8 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
+
 package es.uah.cc.fjestrada.patternDSL.patterns
 
 import java.io.FileReader
@@ -7,6 +12,7 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.uml2.uml.resources.util.UMLResourcesUtil
 
+/** Entry point for the application. */
 object POMLMain extends DSLParser {
   
   def main(args: Array[String]) {

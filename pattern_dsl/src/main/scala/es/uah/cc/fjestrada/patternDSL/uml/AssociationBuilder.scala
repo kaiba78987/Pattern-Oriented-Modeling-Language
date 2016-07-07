@@ -1,3 +1,7 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.AggregationKind
@@ -5,6 +9,7 @@ import org.eclipse.uml2.uml.Package
 import org.eclipse.uml2.uml.Association
 import org.eclipse.uml2.uml.Type
 
+/** Builds an association between two classifiers. */
 class AssociationBuilder extends Builder[Package, Association]
 with RelationBuilder[AssociationBuilder] 
 with NavigableBuilder[AssociationBuilder] 

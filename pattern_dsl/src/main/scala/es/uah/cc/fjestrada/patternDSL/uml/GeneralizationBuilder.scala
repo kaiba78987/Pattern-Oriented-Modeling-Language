@@ -1,9 +1,14 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Generalization
 import org.eclipse.uml2.uml.Package
 import org.eclipse.uml2.uml.Class
 
+/** Builds a generalization between two classes. */
 class GeneralizationBuilder extends Builder[Package, Generalization] 
 with RelationBuilder[GeneralizationBuilder] {
   

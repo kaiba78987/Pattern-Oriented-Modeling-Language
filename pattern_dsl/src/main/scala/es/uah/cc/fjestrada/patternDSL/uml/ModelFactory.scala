@@ -1,7 +1,12 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml._
 
+/** Creates empty models. */
 object ModelFactory {
   
   def apply(name: String): Model = {

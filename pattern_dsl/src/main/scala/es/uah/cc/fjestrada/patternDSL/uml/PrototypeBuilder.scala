@@ -1,3 +1,7 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Class
@@ -7,6 +11,7 @@ import org.eclipse.emf.common.util.BasicEList
 import org.eclipse.uml2.uml.Type
 import org.eclipse.uml2.uml.VisibilityKind
 
+/** Builds a prototype pattern. */
 class PrototypeBuilder extends Builder[Package, Class] 
 with NamedElementBuilder[PrototypeBuilder] {
   

@@ -1,7 +1,12 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Package
 
+/** Builds a class. */
 class ClassBuilder extends AbstractClassifierBuilder[org.eclipse.uml2.uml.Class] 
 with AbstractableElementBuilder[ClassBuilder]
 with NamedElementBuilder[ClassBuilder]

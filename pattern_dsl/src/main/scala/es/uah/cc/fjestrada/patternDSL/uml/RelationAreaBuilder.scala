@@ -1,8 +1,13 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Relationship
 import org.eclipse.uml2.uml.Package
 
+/** Builds all relation defined in. */
 class RelationAreaBuilder extends Builder[Package, List[Relationship]] {
   
   private var _relations: List[Builder[Any, Any]] = Nil

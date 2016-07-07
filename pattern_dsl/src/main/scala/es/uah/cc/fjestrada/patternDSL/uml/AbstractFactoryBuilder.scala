@@ -1,23 +1,32 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Interface
 import org.eclipse.uml2.uml.Package
 import org.eclipse.uml2.uml.Class
 
+/** Builds an abstract factory pattern. */
 class AbstractFactoryBuilder extends Builder[Package, Unit] 
 with NamedElementBuilder[AbstractFactoryBuilder] {
   
   private var _products: List[String] = Nil
   private var _factories: List[String] = Nil
   
+  /** Returns the products which will be produced. */
   def products = _products
+  /** Returns the factories which will be produced. */
   def factories = _factories
   
+  /** Sets the products which will be produced. */
   def products(p: List[String]): AbstractFactoryBuilder = {
     _products = p
     this
   }
   
+  /** Sets the factories which will be produced. */
   def factories(f: List[String]): AbstractFactoryBuilder = {
     _factories = f
     this

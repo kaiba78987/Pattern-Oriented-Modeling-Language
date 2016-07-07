@@ -1,3 +1,7 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Package
@@ -6,6 +10,7 @@ import org.eclipse.emf.common.util.BasicEList
 import org.eclipse.uml2.uml.VisibilityKind
 import org.eclipse.uml2.uml.Type
 
+/** Builds a singleton pattern. */
 class SingletonBuilder extends Builder[Package, Class] 
 with NamedElementBuilder[SingletonBuilder] {
   

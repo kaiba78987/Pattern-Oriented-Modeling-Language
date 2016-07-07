@@ -1,3 +1,7 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.patterns
 
 import java.io.FileReader
@@ -23,6 +27,7 @@ import es.uah.cc.fjestrada.patternDSL.uml.SingletonBuilder
 import org.scalatest.Specs
 import org.scalatest.Suites
 
+/** Tests the DSLParser. */
 @RunWith(classOf[JUnitRunner])
 class ParserSuite extends Suites {
   

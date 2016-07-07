@@ -1,3 +1,7 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Element
@@ -8,16 +12,22 @@ import org.eclipse.uml2.uml.Type
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.BasicEList
 
+/**Defines common features for operation builders. 
+ * 
+ * @tparam BuilderType The especific type of the builder which implement it.
+ */
+
 trait OperationBuilder[BuilderType] {
   
   private var _args: Map[String, String] = Map()
+  /** Returns the arguments. */
   def args = _args
-  
+  /** Sets the arguments. */
   def args(args: Map[String, String]): BuilderType= {
     _args = _args ++ args
     this.asInstanceOf[BuilderType]
   }
-  
+  /** Add an argument. */
   def arg(name: String, t: String): BuilderType= {
     _args = _args + (name -> t)
     this.asInstanceOf[BuilderType]
@@ -42,6 +52,7 @@ trait OperationBuilder[BuilderType] {
   
 }
 
+/** Builds an operation for class. */
 class ClassOperationBuilder extends Builder[org.eclipse.uml2.uml.Class, Operation] 
 with AbstractableElementBuilder[ClassOperationBuilder]
 with StaticableBuilder[ClassOperationBuilder]
@@ -66,6 +77,7 @@ with OperationBuilder[ClassOperationBuilder]{
   }
 }
 
+/** Builds an operation for an interface. */
 class InterfaceOperationBuilder extends Builder[Interface, Operation] 
 with AbstractableElementBuilder[InterfaceOperationBuilder]
 with StaticableBuilder[InterfaceOperationBuilder]

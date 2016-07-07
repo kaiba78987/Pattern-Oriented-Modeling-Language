@@ -1,3 +1,7 @@
+/*
+ * Licensed under the EUPL V.1.1
+ * @author Estrada Martínez, F.J.
+ */
 package es.uah.cc.fjestrada.patternDSL.uml
 
 import org.eclipse.uml2.uml.Package
@@ -6,6 +10,7 @@ import org.eclipse.uml2.uml.Interface
 import org.eclipse.uml2.uml.Abstraction
 import org.eclipse.uml2.uml.Relationship
 
+/** Builds an abstraction. */
 class AbstractionBuilder extends Builder[Package, Relationship] 
 with RelationBuilder[AbstractionBuilder] {
   
